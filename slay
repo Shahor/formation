@@ -137,6 +137,9 @@ fi
 ###############################################################################
 # INSTALL: brews
 ###############################################################################
+# TODO: Put this in cask tap file
+brew tap caskroom/fonts
+
 if [ -e $cwd/swag/brews ]; then
 	chapter "Installing Homebrew formulae…"
 
