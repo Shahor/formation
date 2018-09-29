@@ -218,6 +218,26 @@ fi
 chapter "Defining custom macOS settings..."
 sh swag/macOs
 
+###############################################################################
+# Gcloud and kubernetes tools
+###############################################################################
+chapter "Installing gcloud tools"
+sh extras/gcloud.sh
+
+chapter "Installing helm package manager"
+sh extras/helm.sh
+
+###############################################################################
+# Osx specials
+###############################################################################
+chapter "Syncing dotfiles"
+rsync --exclude ".git/" -avh --no-perms dotfiles ~;
+
+###############################################################################
+# zprezto for zsh
+###############################################################################
+chapter "Installing zprezto"
+/bin/zsh zsh/zprezto.zsh
 
 ###############################################################################
 # OPTIONAL: Customizations
