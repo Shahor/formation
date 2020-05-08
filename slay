@@ -240,7 +240,7 @@ sh extras/helm.sh
 # Osx specials
 ###############################################################################
 chapter "Syncing dotfiles"
-rsync --exclude ".git/" -avh --no-perms dotfiles ~;
+rsync --exclude ".git/" -avh --no-perms dotfiles/ ~;
 
 ###############################################################################
 # zprezto for zsh
