@@ -11,3 +11,4 @@ jq
 stern
 asciinema
 yarn
+docker-compose
