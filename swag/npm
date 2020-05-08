@@ -1,3 +1,2 @@
 eslint::eslint
-fast-cli::fast
-git-standup::git-standup
+spaceship-prompt::spaceship-prompt

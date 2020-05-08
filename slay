@@ -138,14 +138,24 @@ fi
 ###############################################################################
 # INSTALL: brews
 ###############################################################################
-# TODO: Put this in cask tap file
-brew tap caskroom/fonts
 
 if [ -e $cwd/swag/brews ]; then
-	chapter "Installing Homebrew formulae…"
+	chapter "Installing Homebrew taps…"
 
 	for brew in $(<$cwd/swag/brews); do
 		install_brews $brew
+	done
+fi
+
+###############################################################################
+# INSTALL: brew-taps
+###############################################################################
+
+if [ -e $cwd/swag/brew-taps ]; then
+	chapter "Installing Homebrew formulae…"
+
+	for tap in $(<$cwd/swag/brew-taps); do
+		install_brew_taps $tap
 	done
 fi
 
@@ -197,7 +207,6 @@ fi
 ###############################################################################
 chapter "Cleaning up Homebrew files…"
 brew cleanup 2> /dev/null
-brew cask cleanup 2> /dev/null
 
 ###############################################################################
 # INSTALL: npm packages

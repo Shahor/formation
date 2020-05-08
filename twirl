@@ -555,6 +555,12 @@ install_brews() {
     fi
 }
 
+install_brew_taps() {
+    echo_install "Installing tap $tap"
+    brew tap  $tap >/dev/null
+    print_in_green "${bold}✓ installed!${normal}\n"
+}
+
 install_application_via_brew() {
     if [[ ! $(brew cask list | grep $cask) ]]; then
         echo_install "Installing $cask"
